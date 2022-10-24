@@ -1,0 +1,323 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: 'mons';
+    src : url('../font/Montserrat-Regular.otf');
+}
+
+
+
+body {
+    font-family: mons ;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-image: url('../bg/15847161_v957-nunny-11.jpg') ;
+    position: relative;
+    
+}
+
+
+hr {
+    margin:4em 0;
+    height: 20px;
+    border:none;
+    border-radius: 20px;
+    background-color: crimson;
+}
+
+.user-click {
+    display: grid;
+    place-content: center;
+    gap:.2rem;
+    height: 100vh;
+    max-width: 600px;
+    width: 90%;
+    margin:auto;
+    color:crimson;
+}
+
+.user-click p {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.user-click-btn {
+    display: flex;
+    justify-content: center;
+    gap:1rem
+
+}
+
+.user-click-btn button {
+    width: max-content;
+    padding: .5em 1em;
+    background-color: crimson;
+    color:white;
+    border-radius: 5px;
+    border:none;
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+header {
+    /* display:grid; */
+    place-content:center;
+    /* align-items: center; */
+    height:100vh;
+    gap:3em;
+    text-align: center;
+    display: none;
+    
+}
+
+header h1 {
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 2rem;
+    width: 0;
+    animation: typing 3s steps(20,end) infinite ;
+    color:crimson;
+}
+
+header .counter {
+    display: grid;
+    place-content: center;
+    background-color: crimson;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color:white;
+    margin:auto;
+
+}
+
+header .atention {
+    font-size: 1.2rem;
+    color:crimson;
+    font-weight: bold;
+    
+    animation: buble 5s infinite;
+}
+
+header .made {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.container {
+    padding-top:2rem;
+    max-width: 600px;
+    width:90%;
+    /* height: 100vh; */
+    display: none;
+    margin:0 auto;
+    height:100%;
+    transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    
+    
+    
+}
+
+.title-wrapper {
+    display: grid;
+    place-content: center;
+    gap:3rem;
+}
+
+.title,.title-message {
+    font-size: 2rem;
+    font-weight: bold;
+    color:rgba(253, 0, 106, 0.808);
+    text-align: center;
+
+}
+
+.title span, .pesan span {
+    display: block;
+}
+
+.title-img {
+    width: 14rem;
+    height: 14rem;
+    background-color: crimson;
+    border-radius: 50%;
+    margin:auto;
+    overflow: hidden;
+    z-index:3;
+    position:relative;
+}
+
+.title-img-sticker {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    justify-self: center;
+    margin-top: -2em;
+    display: block;
+    margin:0 auto;
+}
+
+
+/* pesan */
+
+
+.message {
+    font-size: 1.8rem;
+    position: relative;
+}
+
+
+
+.mail-message {
+    width: 50%;
+    margin:0 auto;
+    display: block;
+    animation: mail-squase .9s both infinite;
+    animation-delay: .5s;
+    cursor: pointer;
+   
+}
+
+/* message main */
+.message-container {
+
+    position:fixed;
+    top:0;
+    bottom: 0;
+    left:0;
+    right:0;
+    background-color: rgba(44, 43, 43,.6);
+    z-index: 4;
+    display: none;
+  
+}
+.message-wrapper {
+    width: 90%;
+    height: 90vh;
+    vertical-align: middle;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 1rem;
+    padding:1rem;
+    border-radius: 8px;
+    position:relative;
+    overflow: hidden;
+
+
+}
+
+.message-wrapper img    {
+    display: block;
+    width: 60%;
+    margin:auto;
+}
+
+.message {
+    height: 50vh;
+    font-size: 1rem;
+    font-weight: bolder;
+    text-indent: 10px;
+    line-height: 1.5;
+    overflow-y: scroll;
+}
+
+.close {
+    /* width: max-content; */
+    display: block;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    padding:.2rem .5rem;
+    background-color:  white;
+    color:crimson;
+    border-radius:5px;
+    border:2px solid crimson;
+    margin-bottom: 5rem;;
+
+}
+
+
+
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap:1em;
+}
+
+
+
+.img {
+    border:20px solid white;
+    width: 100%;
+    border-bottom: 5rem solid white;
+    outline:1px solid grey;
+}
+
+.img:nth-child(odd){
+    transform: rotate(10deg);
+}
+.img:nth-child(even){
+    transform: rotate(-10deg);
+}
+
+
+/* particle */
+
+#particles-js {
+    position:fixed;
+    bottom:0;
+    width:100%;
+    /* background:grey; */
+    height: 30vh;
+}
+
+
+
+@keyframes mail-squase {
+    0%{transform:scale3d(1,1,1)}
+    30%{transform:scale3d(1.25,.75,1)}
+    40%{transform:scale3d(.75,1.25,1)}
+    50%{transform:scale3d(1.15,.85,1)}
+    65%{transform:scale3d(.95,1.05,1)}
+    75%{transform:scale3d(1.05,.95,1)}
+    100%{transform:scale3d(1,1,1)}
+}
+
+@keyframes typing {
+    from {
+        width:0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes fade {
+    to {
+        opacity:1;
+    }
+}
+
+@keyframes buble {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+
+
